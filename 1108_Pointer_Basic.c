@@ -5,14 +5,14 @@
 
 int main(int argc, char *argv[]) {
 	int x=10;
-	int y=20;
 	int *ptr;
 	
 	ptr=&x;
 	printf("ptr의 값 = %i\n", *ptr);
 	
-	ptr=&y;
-	printf("ptr의 값 = %i\n", *ptr);
+	*ptr=20;
+	printf("x의 값 = %i\n", *ptr);
+
 
 	return 0;
 }
