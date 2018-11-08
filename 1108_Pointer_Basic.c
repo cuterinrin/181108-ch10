@@ -4,15 +4,19 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int x=10;
+	int grade[5] = {10, 20, 30, 40, 50};
+	int ave;
 	int *ptr;
+	int i;
 	
-	ptr=&x;
-	printf("ptr의 값 = %i\n", *ptr);
+	ptr=grade;//ptr=배열 첫 주소 
 	
-	*ptr=20;
-	printf("x의 값 = %i\n", *ptr);
-
-
+	for(i=0; i<5; i++)
+	{
+	ave += ptr[i]/5; 
+	}
+	 
+	printf("average : %i", ave);
+	
 	return 0;
 }
