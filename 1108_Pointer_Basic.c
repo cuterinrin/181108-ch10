@@ -3,20 +3,27 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	int grade[5] = {10, 20, 30, 40, 50};
-	int ave;
-	int *ptr;
-	int i;
-	
-	ptr=grade;//ptr=배열 첫 주소 
-	
-	for(i=0; i<5; i++)
+void swap(int *a, int *b)
 	{
-	ave += ptr[i]/5; 
+	int temp;
+	
+	temp=*a;//temp에 a넣기 
+	*a=*b;//a에 b넣기 
+	*b=temp;//b에 temp 넣기
+	
+	return;
 	}
-	 
-	printf("average : %i", ave);
+	
+int main(int argc, char *argv[]) {
+	
+	int x=19;
+	int y=29;
+	
+	printf("x = %i, y = %i\n", x, y);
+
+	swap(&x, &y);
+	
+	printf("x = %i, y = %i\n", x, y);
 	
 	return 0;
 }
