@@ -4,17 +4,15 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int i;
+	int x=10;
+	int y=20;
 	int *ptr;
-		
-	i=365;
-	ptr=&i;
 	
-	printf("i 주소 = %i\n ", &i);
-	printf("i 값 = %i\n ", i);
+	ptr=&x;
+	printf("ptr의 값 = %i\n", *ptr);
 	
-	printf("ptr 주소 = %i\n ", ptr);
-	printf("ptr 값 = %i\n ", *ptr);
-	
+	ptr=&y;
+	printf("ptr의 값 = %i\n", *ptr);
+
 	return 0;
 }
